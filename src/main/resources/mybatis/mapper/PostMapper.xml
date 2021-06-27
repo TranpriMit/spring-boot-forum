@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qingwenwei.persistence.dao.PostMapper">
+<mapper namespace="com.lixiaoqiu.persistence.dao.PostMapper">
     
-    <resultMap id="PostResultMap" type="com.qingwenwei.persistence.model.Post">
+    <resultMap id="PostResultMap" type="com.lixiaoqiu.persistence.model.Post">
         <id property="id" column="post_id"/>
         <result property="title" column="post_title"/>
         <result property="body" column="post_body"/>
         <result property="dateCreated" column="post_date_created"/>
         <result property="commentCount" column="post_comment_count"/>
         <result property="hitCount" column="post_hit_count"/>
-        <association property="user" column="post_user_id" javaType="com.qingwenwei.persistence.model.User">
+        <association property="user" column="post_user_id" javaType="com.lixiaoqiu.persistence.model.User">
             <id property="id" column="user_id"/>
             <result property="username" column="user_username"/>
             <result property="avatarLocation" column="user_avatar_location"/>
         </association>  
-        <association property="category" column="post_category_id" javaType="com.qingwenwei.persistence.model.Category">
+        <association property="category" column="post_category_id" javaType="com.lixiaoqiu.persistence.model.Category">
             <id property="id" column="category_id"/>
             <result property="name" column="category_name"/>
             <result property="displayName" column="category_display_name"/>
@@ -133,7 +133,7 @@
         SELECT COUNT(p.id) FROM T_POST p WHERE MONTH(p.date_created) = #{month};
     </select>
         
-    <update id="update" parameterType="com.qingwenwei.persistence.model.Post">
+    <update id="update" parameterType="com.lixiaoqiu.persistence.model.Post">
         UPDATE T_POST SET 
 	        title = #{title},
 	        body = #{body},

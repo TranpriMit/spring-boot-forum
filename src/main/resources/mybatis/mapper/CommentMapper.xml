@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qingwenwei.persistence.dao.CommentMapper">
+<mapper namespace="com.lixiaoqiu.persistence.dao.CommentMapper">
     
-    <resultMap id="CommentResultMap" type="com.qingwenwei.persistence.model.Comment">
+    <resultMap id="CommentResultMap" type="com.lixiaoqiu.persistence.model.Comment">
         <id property="id" column="comment_id"/>
         <result property="body" column="comment_body"/>
         <result property="postId" column="comment_post_id"/>
         <result property="dateCreated" column="comment_date_created"/>     
-        <association property="user" column="comment_user_id" javaType="com.qingwenwei.persistence.model.User">
+        <association property="user" column="comment_user_id" javaType="com.lixiaoqiu.persistence.model.User">
             <id property="id" column="user_id"/>
             <result property="username" column="user_username"/>
             <result property="avatarLocation" column="user_avatar_location"/>

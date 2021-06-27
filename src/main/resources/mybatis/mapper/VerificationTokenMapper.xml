@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qingwenwei.persistence.dao.VerificationTokenMapper">
-   <resultMap id="VerificationTokenResultMap" type="com.qingwenwei.persistence.model.VerificationToken">
+<mapper namespace="com.lixiaoqiu.persistence.dao.VerificationTokenMapper">
+   <resultMap id="VerificationTokenResultMap" type="com.lixiaoqiu.persistence.model.VerificationToken">
         <id property="id" column="verification_token_id"/>
         <result property="token" column="verification_token"/>
         <result property="expiryDate" column="verification_expiry_date"/>
-        <association property="user" column="verification_user_id" javaType="com.qingwenwei.persistence.model.User">
+        <association property="user" column="verification_user_id" javaType="com.lixiaoqiu.persistence.model.User">
             <id property="id" column="user_id"/>
             <result property="username" column="user_username"/>
             <result property="avatarLocation" column="user_avatar_location"/>

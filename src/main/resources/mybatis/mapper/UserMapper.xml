@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qingwenwei.persistence.dao.UserMapper">
+<mapper namespace="com.lixiaoqiu.persistence.dao.UserMapper">
     
-    <resultMap id="UserResultMap" type="com.qingwenwei.persistence.model.User">
+    <resultMap id="UserResultMap" type="com.lixiaoqiu.persistence.model.User">
         <id property="id" column="id"/>
         <result property="username" column="username"/>
         <result property="password" column="password"/>
@@ -109,7 +109,7 @@
         FROM T_USER
     </select>
     
-    <update id="update" parameterType="com.qingwenwei.persistence.model.User">
+    <update id="update" parameterType="com.lixiaoqiu.persistence.model.User">
         UPDATE T_USER SET 
             password = #{password},
             email = #{email},
