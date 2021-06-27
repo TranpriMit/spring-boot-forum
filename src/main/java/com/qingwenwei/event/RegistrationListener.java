@@ -30,9 +30,6 @@ public class RegistrationListener implements ApplicationListener<OnRegistrationC
 	private VerificationTokenMapper verificationTokenMapper;
 
 	@Autowired
-	private EmailService emailService;
-
-	@Autowired
 	private UserMapper userMapper;
 
 	// root URL of service

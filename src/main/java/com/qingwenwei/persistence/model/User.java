@@ -61,10 +61,6 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	public Long getActivated() {
-		return activated;
-	}
-
 	public void setActivated(Long activated) {
 		this.activated = activated;
 	}
