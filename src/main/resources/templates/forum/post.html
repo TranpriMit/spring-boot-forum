@@ -18,7 +18,7 @@
 								</div>
  								<div class="media-right media-middle">
  								    <a th:href="@{/user/{userId}(userId=${post.user.id})}">
- 										<img class="media-object img-rounded" th:src="${'../' + post.user.avatarLocation}"
+ 										<img class="media-object img-rounded" th:src="${post.user.avatarLocation}"
  										alt="profile_pic" width="65px" height="65px">
  									</a>
  							    </div>

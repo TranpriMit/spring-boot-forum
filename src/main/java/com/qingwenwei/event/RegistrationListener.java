@@ -14,7 +14,6 @@ import com.qingwenwei.persistence.dao.UserMapper;
 import com.qingwenwei.persistence.dao.VerificationTokenMapper;
 import com.qingwenwei.persistence.model.User;
 import com.qingwenwei.persistence.model.VerificationToken;
-import com.qingwenwei.util.EmailService;
 
 @Component
 public class RegistrationListener implements ApplicationListener<OnRegistrationCompleteEvent> {
